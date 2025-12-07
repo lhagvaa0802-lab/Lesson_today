@@ -44,22 +44,125 @@
 
 // хамгийн өндөр оноотой 3 дүнгээр нь массив үүсгэ.
 
-const students = [
-  { name: "A", score: 88 },
-  { name: "B", score: 95 },
-  { name: "C", score: 72 },
-  { name: "D", score: 99 },
-  { name: "E", score: 91 },
-];
-let newArray = [];
-const compare = students.reduce((acc, val) => {
-  if (acc.score > val.score) {
-    return [acc];
-  } else {
-    return val;
-  }
-}, []);
-newArray.push(compare);
-let container = students.slice(compare);
-console.log(container);
-//Output: ['D', 'B', 'E']
+// const students = [
+//   { name: "A", score: 88 },
+//   { name: "B", score: 95 },
+//   { name: "C", score: 72 },
+//   { name: "D", score: 99 },
+//   { name: "E", score: 91 },
+// ];
+// let newArray = [];
+// const compare = students.reduce((acc, val) => {
+//   if (acc.score > val.score) {
+//     return [acc];
+//   } else {
+//     return val;
+//   }
+// }, []);
+// newArray.push(compare);
+// console.log(newArray);
+// const student1 = students.filter(student => student !== compare);
+// console.log(student1);
+// // const compare2 = student1.reduce((acc, val) => {
+// //   if (acc.score > val.score) {
+// //     return [acc];
+// //   } else {
+// //     return val;
+// //   }}, []) 
+// //   newArray.push(compare2); 
+// //   console.log(newArray);   
+
+// const students = [
+//   { name: "A", score: 88 },
+//   { name: "B", score: 95 },
+//   { name: "C", score: 72 },
+//   { name: "D", score: 99 },
+//   { name: "E", score: 91 },
+// ];
+
+// let topArray = [];
+// let remaining = [...students]; // copy
+
+// for (let i = 0; i < 3; i++) {
+//   const highest = remaining.reduce((acc, val) =>{if (acc.score > val.score) {
+//     return acc; } 
+//     else {
+//       return val;
+//     }} ,remaining[0]);
+//   topArray.push(highest);
+//   remaining = remaining.filter(s => s !== highest);
+// }
+
+// const names = topArray.map(person => person.name);
+// console.log(names);
+
+
+
+// cart дахь бүх бараануудын үнийн дүнгийн нийлбэрийг ол
+// const cart = [
+//   { name: "Book", price: 10, quantity: 2 },
+//   { name: "Pen", price: 2, quantity: 5 },
+//   { name: "Notebook", price: 5, quantity: 3 },
+// ];
+// const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+// console.log(total);
+
+
+// Өгөгдсөн string төрлийн массив дотроос хамгийн урт үгийг ол.
+ 
+// const words = ["hello", "world", "typescript", "js"];
+ 
+// const longestWord = words.reduce((longest, current) => {
+//   if(current.length > longest.length ){
+//     return current;
+//   }else{
+//     return longest;
+//   }
+// }, "");
+ 
+// console.log(longestWord); 
+
+
+// Доорх массивын бүх элементүүдийн үсгийн нийлбэрийг ол
+ 
+// const words = ["hi", "hello", "hey"];
+// const totalLength = words.reduce((acc, word) => acc + word.length, 0);
+// console.log(totalLength);
+
+
+// Хамгийн үнэтэй бүтээгдэхүүнийг харуул
+ 
+// const products = [
+//   { name: "Laptop", price: 900 },
+//   { name: "Phone", price: 700 },
+//   { name: "Monitor", price: 300 },
+// ];
+// const mostExpensive = products.reduce((acc, product) => {
+//   if (acc.price > product.price) {
+//     return acc;
+//   } else {
+//     return product;
+//   }
+// }, products[0]);
+// console.log(mostExpensive);
+// бүх бүтээгдэхүүний нийлбэр үнийн дүнг ол
+ 
+// const items = [
+//   { name: "Chair", price: 80 },
+//   { name: "Desk", price: 120 },
+//   { name: "Lamp", price: 150 },
+// ];
+// const totalPrice = items.reduce((acc, item) => acc + item.price, 0);
+// console.log(totalPrice);
+    
+
+
+ 
+
+ 
+
+
+  
+
+
+
